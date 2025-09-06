@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
@@ -19,7 +18,7 @@ const App: React.FC = () => {
             <HashRouter>
                 <div className="flex flex-col min-h-screen">
                     <Header />
-                    <main className="flex-grow bg-gray-100">
+                    <main className="flex-grow bg-neutral-100">
                         <Routes>
                             <Route path="/" element={<HomePage />} />
                             <Route path="/product/:id" element={<ProductDetailPage />} />
@@ -34,8 +33,11 @@ const App: React.FC = () => {
                             </Route>
                         </Routes>
                     </main>
-                    <footer className="bg-gray-800 text-white py-4 text-center">
-                        <p>&copy; {new Date().getFullYear()} EcoFinds. All rights reserved.</p>
+                    <footer className="bg-neutral-800 text-neutral-300 py-6">
+                        <div className="container mx-auto text-center">
+                            <p>&copy; {new Date().getFullYear()} EcoFinds. All rights reserved.</p>
+                            <p className="text-sm text-neutral-400 mt-1">Promoting a sustainable future, one pre-loved item at a time.</p>
+                        </div>
                     </footer>
                 </div>
             </HashRouter>
