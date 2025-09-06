@@ -1,4 +1,3 @@
-
 export interface User {
   id: string;
   email: string;
@@ -37,12 +36,12 @@ export interface Order {
   total: number;
 }
 
-// FIX: Define a type for the application context to resolve type errors in consuming components.
 export interface AppContextType {
   user: User | null;
   products: Product[];
   cart: CartItem[];
   orders: Order[];
+  isLoading: boolean;
   login: (email: string, password: string) => Promise<void>;
   register: (email: string, password: string, username: string) => Promise<void>;
   logout: () => void;
@@ -55,3 +54,15 @@ export interface AppContextType {
   removeFromCart: (productId: string) => void;
   checkout: () => Promise<void>;
 }
+
+// FIX: Add RootStackParamList for React Navigation type safety.
+export type RootStackParamList = {
+  Home: undefined;
+  ProductDetail: { id: string };
+  Dashboard: undefined;
+  AddProduct: undefined;
+  EditProduct: { id: string };
+  Cart: undefined;
+  Purchases: undefined;
+  Login: undefined;
+};

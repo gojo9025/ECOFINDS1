@@ -1,53 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EcoFinds Marketplace</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-            colors: {
-              primary: {
-                '50': '#f0fdf4',
-                '100': '#dcfce7',
-                '200': '#bbf7d0',
-                '300': '#86efac',
-                '400': '#4ade80',
-                '500': '#22c55e',
-                '600': '#16a34a',
-                '700': '#15803d',
-                '800': '#166534',
-                '900': '#14532d',
-              },
-              neutral: tailwind.colors.slate,
-            }
-          }
-        }
-      }
-    </script>
-    <script type="importmap">
+<script type="importmap">
 {
   "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
-    "react/": "https://aistudiocdn.com/react@^19.1.1/",
     "react": "https://aistudiocdn.com/react@^19.1.1",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.8.2"
+    "react-native-svg": "https://aistudiocdn.com/react-native-svg@^15.12.1",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react-native": "https://aistudiocdn.com/react-native@^0.81.1",
+    "@react-navigation/native": "https://aistudiocdn.com/@react-navigation/native@^7.1.17",
+    "@react-navigation/native-stack": "https://aistudiocdn.com/@react-navigation/native-stack@^7.3.26",
+    "expo-status-bar": "https://aistudiocdn.com/expo-status-bar@^2.2.3",
+    "@react-native-async-storage/async-storage": "https://aistudiocdn.com/@react-native-async-storage/async-storage@^2.2.0"
   }
 }
 </script>
-</head>
-  <body class="bg-neutral-50 font-sans">
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
-</html>
